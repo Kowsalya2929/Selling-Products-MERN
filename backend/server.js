@@ -13,14 +13,15 @@ connectDB()
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-// const allowedOrigins = [
-//   "http://localhost:8000",
-//   "https://selling-products-mern.onrender.com" // your frontend
-// ];
+const allowedOrigins = [
+  "http://localhost:8000",
+  "https://selling-products-mern.onrender.com"
+];
 
 app.use(cors({
     // origin: "http://localhost:5173",
-    origin: "http://localhost:8000",
+    // origin: "http://localhost:8000",
+    origin: allowedOrigins,
     credentials: true
 }))
 

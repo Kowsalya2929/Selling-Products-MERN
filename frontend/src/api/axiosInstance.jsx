@@ -1,11 +1,11 @@
 import axios from 'axios'
 
 const BASE_URL = import.meta.env.PROD
-  ? "https://selling-products-mern.onrender.com/api" // Render backend URL
-  : "http://localhost:8000/api"; // Local backend
+  ? "https://selling-products-mern.onrender.com/api" 
+  : "http://localhost:8000/api";
 
 const axiosInstance = axios.create({
-    baseURL: "http://localhost:8000/api",
+    baseURL: BASE_URL,
     withCredentials: true
 })
 
